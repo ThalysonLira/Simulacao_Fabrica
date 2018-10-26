@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="749.0" maxWidth="1224.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FluxoController">
+   <children>
+      <Label alignment="CENTER" layoutX="686.0" layoutY="46.0" maxWidth="1224.0" prefHeight="100.0" text="Simulação" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TabPane layoutY="84.0" prefHeight="649.0" prefWidth="1224.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <tabs>
+            <Tab text="Fluxo">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="39.0" layoutY="545.0" text="Tempo Decorrido:" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" />
+                        <TextField fx:id="tfTempoDecorrido" editable="false" layoutX="144.0" layoutY="543.0" prefHeight="25.0" prefWidth="120.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="145.0" />
+                        <HBox alignment="CENTER" layoutX="205.0" layoutY="62.0" prefHeight="185.0" prefWidth="1016.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                           <children>
+                              <AnchorPane layoutX="60.0" prefHeight="175.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC; -fx-border-color: black;">
+                                 <children>
+                                    <Label alignment="CENTER" style="-fx-background-color: #C0C0C0;" text="Esteira 1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="14.0" layoutY="30.0" text="Capacidade:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfCapacidadeEsteira1" layoutX="88.0" layoutY="25.0" prefHeight="25.0" prefWidth="95.0" promptText="Kg" text="1000" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="16.0" layoutY="90.0" prefWidth="65.0" text="Consumo:" AnchorPane.leftAnchor="16.0" />
+                                    <Label layoutX="17.0" layoutY="60.0" prefWidth="65.0" text="Tempo:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0" />
+                                    <TextField fx:id="tfTempoEsteira1" layoutX="36.0" layoutY="55.0" promptText="Minutos" text="10" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="150.0" prefWidth="65.0" text="Qnt. Fila:" />
+                                    <TextField fx:id="tfConsumoEsteira1" layoutX="91.0" layoutY="86.0" promptText="KW / H" text="1" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <TextField fx:id="tfQuantidadeEsteira1" editable="false" layoutX="-444.0" layoutY="145.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="4.0" layoutY="120.0" prefWidth="65.0" text="Status:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfStatusEsteira1" editable="false" layoutX="78.0" layoutY="115.0" promptText="Parado" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Line endX="100.0" />
+                              <AnchorPane prefHeight="175.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC; -fx-border-color: black;">
+                                 <children>
+                                    <Label alignment="CENTER" style="-fx-background-color: #C0C0C0;" text="Forno" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="14.0" layoutY="30.0" text="Capacidade:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfCapacidadeForno" layoutX="88.0" layoutY="25.0" prefHeight="25.0" prefWidth="95.0" promptText="Kg" text="600" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="16.0" layoutY="90.0" prefWidth="65.0" text="Consumo:" AnchorPane.leftAnchor="16.0" />
+                                    <Label layoutX="17.0" layoutY="60.0" prefWidth="65.0" text="Tempo:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0" />
+                                    <TextField fx:id="tfTempoForno" layoutX="36.0" layoutY="55.0" promptText="Horas" text="8" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="150.0" prefWidth="65.0" text="Qnt. Fila:" />
+                                    <TextField fx:id="tfConsumoForno" layoutX="91.0" layoutY="86.0" promptText="L / H" text="2" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <TextField fx:id="tfQuantidadeForno" editable="false" layoutX="-444.0" layoutY="145.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="-44.0" layoutY="120.0" prefWidth="65.0" text="Status:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfStatusForno" editable="false" layoutX="30.0" layoutY="115.0" promptText="Parado" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Line endX="348.0" endY="-10.0" startX="248.0" startY="-10.0" />
+                              <AnchorPane prefHeight="175.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC; -fx-border-color: black;">
+                                 <children>
+                                    <Label alignment="CENTER" style="-fx-background-color: #C0C0C0;" text="Máquina" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="14.0" layoutY="30.0" text="Capacidade:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfCapacidadeMaquina" layoutX="88.0" layoutY="25.0" prefHeight="25.0" prefWidth="95.0" promptText="Kg" text="600" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="16.0" layoutY="90.0" prefWidth="65.0" text="Consumo:" AnchorPane.leftAnchor="16.0" />
+                                    <Label layoutX="17.0" layoutY="60.0" prefWidth="65.0" text="Tempo:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0" />
+                                    <TextField fx:id="tfTempoMaquina" layoutX="36.0" layoutY="55.0" promptText="Minutos" text="25" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="150.0" prefWidth="65.0" text="Qnt. Fila:" />
+                                    <TextField fx:id="tfConsumoMaquina" layoutX="91.0" layoutY="86.0" promptText="KW / H" text="0.5" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <TextField fx:id="tfQuantidadeMaquina" editable="false" layoutX="-444.0" layoutY="145.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="8.0" layoutY="120.0" prefWidth="65.0" text="Status:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfStatusMaquina" editable="false" layoutX="82.0" layoutY="115.0" promptText="Parado" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Line endX="58.0" startX="-42.0" />
+                              <AnchorPane prefHeight="175.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC; -fx-border-color: black;">
+                                 <children>
+                                    <Label alignment="CENTER" style="-fx-background-color: #C0C0C0;" text="Esteira 2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="14.0" layoutY="30.0" text="Capacidade:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfCapacidadeEsteira2" layoutX="88.0" layoutY="25.0" prefHeight="25.0" prefWidth="95.0" promptText="Kg" text="420" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="16.0" layoutY="90.0" prefWidth="65.0" text="Consumo:" AnchorPane.leftAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="60.0" prefWidth="65.0" text="Tempo:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfTempoEsteira2" layoutX="36.0" layoutY="55.0" promptText="Minutos" text="10" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="150.0" prefWidth="65.0" text="Qnt. Fila:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfConsumoEsteira2" layoutX="91.0" layoutY="86.0" promptText="KW / H" text="2.5" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <TextField fx:id="tfQuantidadeEsteira2" editable="false" layoutX="-444.0" layoutY="145.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="-17.0" layoutY="120.0" prefWidth="65.0" text="Status:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfStatusEsteira2" editable="false" layoutX="57.0" layoutY="115.0" promptText="Parado" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="-20.0" layoutY="277.0" prefHeight="265.0" prefWidth="1016.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="210.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC; -fx-border-color: black;">
+                                 <children>
+                                    <Label alignment="CENTER" style="-fx-background-color: #C0C0C0;" text="Caminhão" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="14.0" layoutY="30.0" text="Capacidade:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfCapacidadeCaminhao" layoutX="88.0" layoutY="25.0" prefHeight="25.0" prefWidth="95.0" promptText="Kg" text="1500" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="16.0" layoutY="90.0" prefWidth="65.0" text="Vel. Vazio:" AnchorPane.leftAnchor="16.0" />
+                                    <Label layoutX="17.0" layoutY="60.0" prefWidth="65.0" text="Vel. Cheio:" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0" />
+                                    <TextField fx:id="tfVelCheioCaminhao" layoutX="36.0" layoutY="55.0" promptText="Km / H" text="60" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="120.0" prefWidth="65.0" text="Consumo:" />
+                                    <TextField fx:id="tfVelVazioCaminhao" layoutX="91.0" layoutY="86.0" promptText="Km / H" text="80" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <TextField fx:id="tfConsumoCaminhao" editable="false" layoutX="-444.0" layoutY="115.0" promptText="L / H" text="5" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="150.0" prefWidth="65.0" text="Status:" />
+                                    <TextField fx:id="tfStatusCaminhao" editable="false" layoutX="91.0" layoutY="145.0" promptText="Parado" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="180.0" prefWidth="65.0" text="Qnt. Peças:" />
+                                    <TextField fx:id="tfQuantidadeCaminhao" editable="false" layoutX="89.0" layoutY="175.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="50.0" top="7.5" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                              <Line endX="8.0" startX="-42.0" />
+                              <TextField fx:id="tfDistanciaFabricaEmpacotadora" alignment="CENTER" prefHeight="25.0" prefWidth="38.0" promptText="Km" text="200" />
+                              <Line endX="-50.0" startX="-100.0" />
+                              <AnchorPane prefHeight="265.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC; -fx-border-color: black;">
+                                 <children>
+                                    <Label alignment="CENTER" style="-fx-background-color: #C0C0C0;" text="Trabalhadores" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="14.0" layoutY="30.0" text="Capacidade:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfCapacidadeTrabalhadores" layoutX="88.0" layoutY="25.0" prefHeight="25.0" prefWidth="95.0" promptText="Kg" text="100" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="16.0" layoutY="150.0" prefWidth="65.0" text="Consumo:" AnchorPane.leftAnchor="16.0" />
+                                    <Label layoutX="17.0" layoutY="90.0" prefWidth="65.0" text="Tempo Carga:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfTempoCargaTrabalhadores" layoutX="36.0" layoutY="85.0" promptText="Minutos" text="20" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="240.0" prefWidth="65.0" text="Qnt. Fila:" />
+                                    <TextField fx:id="tfConsumoTrabalhadores" layoutX="91.0" layoutY="145.0" promptText="KW / H" text="3" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <TextField fx:id="tfQuantidadeTrabalhadores" editable="false" layoutX="-444.0" layoutY="235.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <TextField fx:id="tfDiariaTrabalhadores" editable="false" layoutX="35.0" layoutY="175.0" promptText="R$ / Dia" text="80" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="16.0" layoutY="180.0" prefWidth="65.0" text="Valor Diaria:" AnchorPane.leftAnchor="15.0" />
+                                    <Label layoutX="5.0" layoutY="210.0" prefWidth="65.0" text="Status:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfStatusTrabalhadores" editable="false" layoutX="79.0" layoutY="205.0" promptText="Parado" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="120.0" prefWidth="65.0" text="Tempo Transp:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfTempoTransporteTrabalhadores" layoutX="37.0" layoutY="115.0" promptText="Minutos" text="60" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="59.0" prefWidth="65.0" text="Quantidade:" />
+                                    <TextField fx:id="tfQuantidadeTrabalhadores" layoutX="25.0" layoutY="55.0" promptText="Unidades" text="5" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Line endX="58.0" startX="-42.0" />
+                              <AnchorPane layoutY="50.0" prefHeight="175.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC; -fx-border-color: black;">
+                                 <children>
+                                    <Label alignment="CENTER" style="-fx-background-color: #C0C0C0;" text="Empacotadora" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="14.0" layoutY="30.0" text="Capacidade:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfCapacidadeEmpacotadora" layoutX="88.0" layoutY="25.0" prefHeight="25.0" prefWidth="95.0" promptText="Kg" text="1750" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="90.0" prefWidth="65.0" text="Consumo:" />
+                                    <TextField fx:id="tfConsumoEmpacotadora" editable="false" layoutX="-444.0" layoutY="85.0" promptText="KW / H" text="1.5" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="120.0" prefWidth="65.0" text="Status:" />
+                                    <TextField fx:id="tfStatusEmpacotadora" editable="false" layoutX="91.0" layoutY="115.0" promptText="Parado" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="150.0" prefWidth="65.0" text="Qnt. Fila:" />
+                                    <TextField fx:id="tfQuantidadeEmpacotadora" editable="false" layoutX="89.0" layoutY="145.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="16.0" layoutY="60.0" prefWidth="65.0" text="Tempo:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfTempoEmpacotadora" layoutX="90.0" layoutY="55.0" prefHeight="25.0" prefWidth="95.0" promptText="Minutos" text="30" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="65.0" top="25.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                              <Line endX="58.0" startX="-42.0" />
+                              <AnchorPane layoutY="120.0" prefHeight="121.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC; -fx-border-color: black;">
+                                 <children>
+                                    <Label alignment="CENTER" style="-fx-background-color: #C0C0C0;" text="Pátio" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Label layoutX="15.0" layoutY="30.0" text="Capacidade:" AnchorPane.leftAnchor="15.0" />
+                                    <TextField fx:id="tfCapacidadePatio" layoutX="88.0" layoutY="25.0" prefHeight="25.0" prefWidth="95.0" promptText="Kg" text="35000" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="60.0" prefWidth="65.0" text="Status:" />
+                                    <TextField fx:id="tfStatusPatio" editable="false" layoutX="91.0" layoutY="55.0" promptText="Parado" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                    <Label layoutX="17.0" layoutY="90.0" prefWidth="65.0" text="Qnt. Peças:" />
+                                    <TextField fx:id="tfQuantidadePatio" editable="false" layoutX="89.0" layoutY="85.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="15.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="70.0" top="70.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" layoutY="548.0" prefHeight="65.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Button fx:id="btPlayPausa" mnemonicParsing="false" onAction="#handlePausar" prefWidth="80.0" text="Pausar" />
+                              <Button fx:id="btIniciar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleIniciar" prefWidth="160.0" text="Iniciar" />
+                              <Button fx:id="btParar" mnemonicParsing="false" onAction="#handleParar" prefWidth="80.0" text="Parar" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Dados">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="100.0" layoutY="70.0" prefHeight="332.0" prefWidth="612.0" style="-fx-background-color: #C0C0C0;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+                           <columns>
+                              <TableColumn prefWidth="171.0" text="Tempo" />
+                              <TableColumn prefWidth="282.0" text="Processo" />
+                              <TableColumn minWidth="0.0" prefWidth="682.0" text="Ação" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
